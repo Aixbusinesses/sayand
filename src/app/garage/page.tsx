@@ -6,20 +6,20 @@ export default function GaragePage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">My Garage</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Your personal space to plan, build, and showcase your Corsa.</p>
+                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Mi Garaje</h1>
+                <p className="mt-2 text-lg text-muted-foreground">Tu espacio personal para planificar, construir y mostrar tu Corsa.</p>
             </div>
 
             <div className="relative p-8 border-2 border-dashed border-border rounded-lg">
                 <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10 flex flex-col items-center justify-center text-center p-4">
                     <Lock className="h-16 w-16 text-accent mb-4" />
-                    <h2 className="font-headline text-3xl text-white tracking-wide">Feature Locked</h2>
+                    <h2 className="font-headline text-3xl text-white tracking-wide">Función Bloqueada</h2>
                     <p className="text-muted-foreground max-w-md mt-2">
-                        Create an account or sign in to access your garage, save parts lists, and track your modifications.
+                        Crea una cuenta o inicia sesión para acceder a tu garaje, guardar listas de piezas y seguir tus modificaciones.
                     </p>
                     <Button size="lg" className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90">
                         <UserPlus className="mr-2 h-5 w-5" />
-                        Sign Up / Login
+                        Registrarse / Iniciar Sesión
                     </Button>
                 </div>
 
@@ -28,7 +28,7 @@ export default function GaragePage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 font-headline tracking-wide text-2xl">
                                 <List />
-                                My Saved Parts
+                                Mis Piezas Guardadas
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -47,12 +47,12 @@ export default function GaragePage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 font-headline tracking-wide text-2xl">
                                 <Wrench />
-                                My Current Build
+                                Mi Proyecto Actual
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="aspect-video bg-card-foreground/5 rounded-lg"></div>
-                            <p className="text-muted-foreground mt-2">1998 Corsa B 1.6 - Track Project</p>
+                            <p className="text-muted-foreground mt-2">1998 Corsa B 1.6 - Proyecto de Pista</p>
                         </CardContent>
                     </Card>
                 </div>

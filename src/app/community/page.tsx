@@ -49,8 +49,8 @@ export default function CommunityPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Community Showcase</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Get inspired by builds from fellow Corsa enthusiasts.</p>
+                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Comunidad</h1>
+                <p className="mt-2 text-lg text-muted-foreground">Inspírate con los proyectos de otros entusiastas del Corsa.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {communityProjects.map((project) => (

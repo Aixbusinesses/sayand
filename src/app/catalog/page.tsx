@@ -51,8 +51,8 @@ export default function CatalogPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Parts Catalog</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Browse all available parts for your Corsa.</p>
+                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Catálogo de Piezas</h1>
+                <p className="mt-2 text-lg text-muted-foreground">Explora todas las piezas disponibles para tu Corsa.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {catalogParts.map((part) => (

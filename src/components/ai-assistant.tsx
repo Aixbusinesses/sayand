@@ -25,7 +25,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 const formSchema = z.object({
   description: z.string().min(10, {
-    message: 'Please describe your desired modification in at least 10 characters.',
+    message: 'Por favor, describe la modificación deseada con al menos 10 caracteres.',
   }),
 });
 
@@ -52,7 +52,7 @@ export function AIAssistant() {
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: result.error || 'An unexpected error occurred.',
+        description: result.error || 'Ocurrió un error inesperado.',
       });
     }
     setIsLoading(false);
@@ -65,7 +65,7 @@ export function AIAssistant() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-3xl md:text-4xl tracking-wide text-accent">
               <Wand2 className="h-8 w-8" />
-              AI-Powered Build Assistant
+              Asistente de Proyectos con IA
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -76,10 +76,10 @@ export function AIAssistant() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg">Describe Your Dream Corsa</FormLabel>
+                      <FormLabel className="text-lg">Describe el Corsa de tus Sueños</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="e.g., 'I want to make my Corsa faster for track days with a budget of $2000' or 'A stylish wide-body Corsa with better sound'"
+                          placeholder="Ej: 'Quiero que mi Corsa sea más rápido para los días de pista con un presupuesto de $2000' o 'Un Corsa wide-body con mejor sonido'"
                           className="min-h-[100px] bg-background"
                           {...field}
                         />
@@ -89,7 +89,7 @@ export function AIAssistant() {
                   )}
                 />
                 <Button type="submit" disabled={isLoading} size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  {isLoading ? 'Generating Ideas...' : 'Generate Part List'}
+                  {isLoading ? 'Generando Ideas...' : 'Generar Lista de Piezas'}
                 </Button>
               </form>
             </Form>
@@ -110,7 +110,7 @@ export function AIAssistant() {
               )}
               {parts.length > 0 && (
                 <>
-                  <h3 className="font-headline text-3xl text-center mb-6 tracking-wide text-primary">Your Custom Parts List</h3>
+                  <h3 className="font-headline text-3xl text-center mb-6 tracking-wide text-primary">Tu Lista de Piezas Personalizada</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {parts.map((part) => (
                       <PartCard key={part.name} part={part} />

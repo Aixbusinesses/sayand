@@ -6,11 +6,11 @@ import { Cog } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/catalog', label: 'Parts Catalog' },
-  { href: '/garage', label: 'My Garage' },
-  { href: '/#ai-assistant', label: 'AI Assistant' },
-  { href: '/community', label: 'Community' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/catalog', label: 'Catálogo' },
+  { href: '/garage', label: 'Mi Garaje' },
+  { href: '/#ai-assistant', label: 'Asistente IA' },
+  { href: '/community', label: 'Comunidad' },
+  { href: '/contact', label: 'Contacto' },
 ];
 
 export function Header() {
