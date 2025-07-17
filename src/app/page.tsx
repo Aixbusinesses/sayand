@@ -37,7 +37,7 @@ const communityProjects = [
         title: "Proyecto Corsa Turbo",
         author: "Andrés G.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1629450648316-c14d6f859424?q=80&w=1974&auto=format&fit=crop",
         likes: 152,
         dataAiHint: "red corsa"
     },
@@ -45,7 +45,7 @@ const communityProjects = [
         title: "Corsa Evolution Restaurado",
         author: "Carlos R.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1555516183-1e247b92a343?q=80&w=2070&auto=format&fit=crop",
         likes: 210,
         dataAiHint: "blue corsa"
     },
@@ -53,17 +53,17 @@ const communityProjects = [
         title: "Mi Corsa de Pista",
         author: "Sebastian M.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1553440569-b5f370461872?q=80&w=2070&auto=format&fit=crop",
         likes: 305,
         dataAiHint: "corsa race car"
     },
 ];
 
 const carouselImages = [
-  { src: "https://placehold.co/1920x1080.png", alt: "Motor de Corsa modificado", hint: "corsa engine" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Corsa azul deportivo", hint: "blue corsa" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Varios repuestos de Corsa en estantería", hint: "car parts" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Corsa rojo clásico", hint: "red corsa" },
+  { src: "https://images.unsplash.com/photo-1622684803738-17a415a781b1?q=80&w=2070&auto=format&fit=crop", alt: "Motor de Corsa modificado", hint: "corsa engine" },
+  { src: "https://images.unsplash.com/photo-1555516183-1e247b92a343?q=80&w=2070&auto=format&fit=crop", alt: "Corsa azul deportivo", hint: "blue corsa" },
+  { src: "https://images.unsplash.com/photo-1629450648316-c14d6f859424?q=80&w=1974&auto=format&fit=crop", alt: "Corsa rojo clásico", hint: "red corsa" },
+  { src: "https://images.unsplash.com/photo-1553440569-b5f370461872?q=80&w=2070&auto=format&fit=crop", alt: "Corsa de carreras", hint: "corsa race car" },
 ];
 
 
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
                 <Image 
-                    src="https://placehold.co/800x600.png"
+                    src="https://images.unsplash.com/photo-1549298236-834928e578a1?q=80&w=2070&auto=format&fit=crop"
                     alt="Garaje con herramientas y un Corsa"
                     width={800}
                     height={600}

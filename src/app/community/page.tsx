@@ -5,7 +5,7 @@ const communityProjects = [
         title: "Mi Corsa B Sleeper 1.8T",
         author: "TunerTom",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1629450648316-c14d6f859424?q=80&w=1974&auto=format&fit=crop",
         likes: 128,
         dataAiHint: "red corsa"
     },
@@ -13,7 +13,7 @@ const communityProjects = [
         title: "Proyecto Corsa Evolution",
         author: "StanceLife",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1555516183-1e247b92a343?q=80&w=2070&auto=format&fit=crop",
         likes: 256,
         dataAiHint: "blue corsa"
     },
@@ -21,7 +21,7 @@ const communityProjects = [
         title: "Corsa C para Rally",
         author: "RallyFanatic",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1553440569-b5f370461872?q=80&w=2070&auto=format&fit=crop",
         likes: 98,
         dataAiHint: "corsa rally"
     },
@@ -29,7 +29,7 @@ const communityProjects = [
         title: "Corsa Active con Sonido",
         author: "BassHeadBR",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704a",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1622684803738-17a415a781b1?q=80&w=2070&auto=format&fit=crop",
         likes: 402,
         dataAiHint: "corsa audio"
     },
@@ -37,7 +37,7 @@ const communityProjects = [
         title: "Restauración Corsa 1998",
         author: "ClassicCarl",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704b",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1603642089422-427c88019cf5?q=80&w=1974&auto=format&fit=crop",
         likes: 177,
         dataAiHint: "classic corsa"
     },
@@ -45,7 +45,7 @@ const communityProjects = [
         title: "Corsa para Time Attack",
         author: "SpeedDemon",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704c",
-        imageUrl: "https://placehold.co/800x600.png",
+        imageUrl: "https://images.unsplash.com/photo-1610196928275-3b953835c643?q=80&w=1974&auto=format&fit=crop",
         likes: 312,
         dataAiHint: "corsa race car"
     },
