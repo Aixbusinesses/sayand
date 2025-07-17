@@ -102,26 +102,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-      
-      <AIAssistant />
-
-      <section className="w-full max-w-7xl px-4 py-16">
-        <h2 className="font-headline text-4xl text-center mb-2 tracking-wide text-primary">Piezas Destacadas</h2>
-        <p className="text-center text-muted-foreground mb-8">Una selección de nuestros repuestos más populares para Corsa.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredParts.map((part) => (
-            <PartCard key={part.name} part={part} />
-          ))}
-        </div>
-        <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/catalog">
-                    Ver Catálogo Completo
-                    <ArrowRight className="ml-2" />
-                </Link>
-            </Button>
-        </div>
-      </section>
 
       <section className="w-full bg-card">
         <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
@@ -148,6 +128,26 @@ export default function Home() {
                     data-ai-hint="corsa garage"
                 />
             </div>
+        </div>
+      </section>
+      
+      <AIAssistant />
+
+      <section className="w-full max-w-7xl px-4 py-16">
+        <h2 className="font-headline text-4xl text-center mb-2 tracking-wide text-primary">Piezas Destacadas</h2>
+        <p className="text-center text-muted-foreground mb-8">Una selección de nuestros repuestos más populares para Corsa.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredParts.map((part) => (
+            <PartCard key={part.name} part={part} />
+          ))}
+        </div>
+        <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/catalog">
+                    Ver Catálogo Completo
+                    <ArrowRight className="ml-2" />
+                </Link>
+            </Button>
         </div>
       </section>
 
