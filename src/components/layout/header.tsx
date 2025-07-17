@@ -6,10 +6,11 @@ import { Cog } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/#ai-assistant', label: 'AI Assistant' },
   { href: '/catalog', label: 'Parts Catalog' },
-  { href: '/community', label: 'Community' },
   { href: '/garage', label: 'My Garage' },
+  { href: '/#ai-assistant', label: 'AI Assistant' },
+  { href: '/community', label: 'Community' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export function Header() {
@@ -20,7 +21,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Cog className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl tracking-wider text-foreground">Corsa Customs</span>
+          <span className="font-headline text-2xl tracking-wider text-foreground">SAYAND</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navLinks.map((link) => (

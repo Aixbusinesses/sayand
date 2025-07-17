@@ -42,7 +42,7 @@ export default function Home() {
           priority
         />
         <div className="relative z-20 flex flex-col items-center">
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-wider text-shadow-lg">CRAFT YOUR ULTIMATE CORSA</h1>
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-wider text-shadow-lg">CRAFT YOUR ULTIMATE RIDE</h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg text-neutral-200">
             From street style to track-ready performance, find and configure the perfect parts for your build. Our AI assistant helps you choose, you do the driving.
           </p>

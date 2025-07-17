@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Corsa Customs',
-  description: 'Your one-stop shop for Chevrolet Corsa modifications.',
+  title: 'SAYAND',
+  description: 'Your one-stop shop for SAYAND modifications.',
 };
 
 export default function RootLayout({
