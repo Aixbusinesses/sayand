@@ -17,33 +17,54 @@ const catalogParts: Part[] = [
         compatibility: ["Corsa 1.4L", "Corsa 1.6L"]
     },
     {
-        name: "16-inch Alloy Wheels 'Torque'",
-        description: "Set of four lightweight 16-inch alloy wheels in matte black. Reduces unsprung weight for better handling.",
-        estimatedCost: 950,
+        name: "Rines de Lujo 15 pulgadas",
+        description: "Juego de 4 rines de lujo de 15 pulgadas, diseño multiradio en color grafito. Ideales para Corsa.",
+        estimatedCost: 800,
         installationGuide: "#",
-        compatibility: ["All Corsa models with 4-lug pattern"]
+        compatibility: ["Todos los modelos Corsa 4-lug"]
     },
     {
-        name: "LED Projector Headlights",
-        description: "Modernize your Corsa's look with these black housing LED projector headlights. Includes DRL light bar.",
-        estimatedCost: 350,
+        name: "Stop Trasero Tipo Altezza",
+        description: "Dale un look más moderno a tu Corsa con estos stops traseros tipo Altezza con fondo cromado.",
+        estimatedCost: 150,
         installationGuide: "#",
         compatibility: ["Corsa B (1993-2000)"]
     },
     {
-        name: "Big Brake Kit - Front",
-        description: "Improve your stopping power with this front big brake kit. Includes 4-piston calipers and drilled/slotted rotors.",
-        estimatedCost: 1200,
+        name: "Kit de Frenos Mejorado",
+        description: "Mejora la frenada de tu Corsa con este kit de discos hiperventilados y pastillas de cerámica.",
+        estimatedCost: 450,
         installationGuide: "#",
         compatibility: ["Corsa C (2000-2006)"]
     },
     {
-        name: "GSi Style Rear Spoiler",
-        description: "Iconic GSi style rear spoiler to add a sporty look. Comes primered and ready for paint.",
+        name: "Spoiler Estilo GSi",
+        description: "Alerón trasero icónico estilo GSi para darle un look deportivo. Viene listo para pintar.",
         estimatedCost: 220,
         installationGuide: "#",
-        compatibility: ["Corsa B 3-door", "Corsa B 5-door"]
+        compatibility: ["Corsa B 3-puertas", "Corsa B 5-puertas"]
     },
+    {
+        name: "Pila de Gasolina de Alto Flujo",
+        description: "Asegura el flujo de combustible correcto para tu motor modificado con esta pila de alto rendimiento.",
+        estimatedCost: 90,
+        installationGuide: "#",
+        compatibility: ["Todos los modelos Corsa"]
+    },
+    {
+        name: "Capó de Fibra de Vidrio",
+        description: "Reduce peso y mejora la estética con este capó de fibra de vidrio con tomas de aire funcionales.",
+        estimatedCost: 500,
+        installationGuide: "#",
+        compatibility: ["Corsa B", "Corsa Evolution"]
+    },
+    {
+        name: "Cables de Alta para Bujías",
+        description: "Set de cables de 8mm en silicona para mejorar la chispa y el rendimiento del motor.",
+        estimatedCost: 70,
+        installationGuide: "#",
+        compatibility: ["Corsa 1.4L", "Corsa 1.6L"]
+    }
 ];
 
 
@@ -51,8 +72,8 @@ export default function CatalogPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Catálogo de Piezas</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Explora todas las piezas disponibles para tu Corsa.</p>
+                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Catálogo de Repuestos</h1>
+                <p className="mt-2 text-lg text-muted-foreground">Explora todas las piezas disponibles para tu Chevrolet Corsa.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {catalogParts.map((part) => (

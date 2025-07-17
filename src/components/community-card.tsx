@@ -11,6 +11,7 @@ interface CommunityCardProps {
     avatar: string;
     imageUrl: string;
     likes: number;
+    dataAiHint?: string;
   };
 }
 
@@ -24,7 +25,7 @@ export function CommunityCard({ project }: CommunityCardProps) {
             alt={project.title}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
-            data-ai-hint="custom car"
+            data-ai-hint={project.dataAiHint || "custom car"}
           />
         </div>
       </CardHeader>

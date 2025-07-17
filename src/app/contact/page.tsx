@@ -9,7 +9,7 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Contáctanos</h1>
-        <p className="mt-2 text-lg text-muted-foreground">Nos encantaría saber de ti. Contáctanos si tienes alguna pregunta.</p>
+        <p className="mt-2 text-lg text-muted-foreground">¿Tienes preguntas? Estamos aquí para ayudarte con tu proyecto Corsa.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -41,15 +41,15 @@ export default function ContactPage() {
           <div className="flex items-start gap-4">
             <Phone className="h-6 w-6 text-accent mt-1" />
             <div>
-              <h4 className="font-bold">Teléfono</h4>
-              <p className="text-muted-foreground">+1 (555) 123-4567</p>
+              <h4 className="font-bold">WhatsApp</h4>
+              <p className="text-muted-foreground">3112423436</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <MapPin className="h-6 w-6 text-accent mt-1" />
             <div>
               <h4 className="font-bold">Dirección</h4>
-              <p className="text-muted-foreground">123 Custom Lane, Auto City, 12345</p>
+              <p className="text-muted-foreground">Carrera 17 #8-37, Bogotá, Colombia</p>
             </div>
           </div>
         </div>

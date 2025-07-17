@@ -10,57 +10,60 @@ import { CommunityCard } from '@/components/community-card';
 
 const featuredParts: Part[] = [
   {
-    name: "Turbo Kit Stage 2",
-    description: "Complete turbo kit to boost your Corsa's performance. Includes manifold, turbocharger, intercooler, and all necessary piping.",
-    estimatedCost: 1500,
+    name: "Kit de Turbo para Corsa 1.6L",
+    description: "Kit completo de turbo para llevar tu Corsa al siguiente nivel. Incluye turbocompresor, intercooler y tuberías.",
+    estimatedCost: 1800,
     installationGuide: "#",
-    compatibility: ["Corsa 1.6L", "Corsa 1.8L"]
+    compatibility: ["Corsa 1.6L"]
   },
   {
-    name: "Adjustable Coilover Suspension",
-    description: "Lower your Corsa and improve handling with this fully adjustable coilover kit. Set your own height and damping.",
-    estimatedCost: 850,
+    name: "Faros Angel Eyes Corsa B",
+    description: "Moderniza la apariencia de tu Corsa con estos faros 'Angel Eyes' de alta calidad con fondo negro.",
+    estimatedCost: 250,
     installationGuide: "#",
-    compatibility: ["All Corsa B/C Models"]
+    compatibility: ["Corsa B (1993-2000)"]
   },
   {
-    name: "Wide Body Fender Flares",
-    description: "Give your Corsa an aggressive stance with these custom-fit wide body fender flares. Made from durable ABS plastic.",
-    estimatedCost: 400,
+    name: "Tapa Válvulas Cromada",
+    description: "Dale un toque de elegancia y personalización al motor de tu Corsa con esta tapa de válvulas cromada.",
+    estimatedCost: 120,
     installationGuide: "#",
-    compatibility: ["Corsa B 3-door"]
+    compatibility: ["Corsa 1.4L", "Corsa 1.6L"]
   }
 ];
 
 const communityProjects = [
     {
-        title: "My 1.8T Corsa B Sleeper",
-        author: "TunerTom",
+        title: "Proyecto Corsa Turbo",
+        author: "Andrés G.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
         imageUrl: "https://placehold.co/800x600.png",
-        likes: 128,
+        likes: 152,
+        dataAiHint: "red corsa"
     },
     {
-        title: "Clean & Low Daily Driver",
-        author: "StanceLife",
+        title: "Corsa Evolution Restaurado",
+        author: "Carlos R.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
         imageUrl: "https://placehold.co/800x600.png",
-        likes: 256,
+        likes: 210,
+        dataAiHint: "blue corsa"
     },
     {
-        title: "Full Rally Build Corsa C",
-        author: "RallyFanatic",
+        title: "Mi Corsa de Pista",
+        author: "Sebastian M.",
         avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
         imageUrl: "https://placehold.co/800x600.png",
-        likes: 98,
+        likes: 305,
+        dataAiHint: "corsa race car"
     },
 ];
 
 const carouselImages = [
-  { src: "https://placehold.co/1920x1080.png", alt: "Corsa deportivo modificado", hint: "tuned car" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Corsa rojo en una carretera", hint: "red car" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Detalle de llanta de aleación", hint: "alloy wheel" },
-  { src: "https://placehold.co/1920x1080.png", alt: "Interior de un Corsa personalizado", hint: "custom car interior" },
+  { src: "https://placehold.co/1920x1080.png", alt: "Motor de Corsa modificado", hint: "corsa engine" },
+  { src: "https://placehold.co/1920x1080.png", alt: "Corsa azul deportivo", hint: "blue corsa" },
+  { src: "https://placehold.co/1920x1080.png", alt: "Varios repuestos de Corsa en estantería", hint: "car parts" },
+  { src: "https://placehold.co/1920x1080.png", alt: "Corsa rojo clásico", hint: "red corsa" },
 ];
 
 
@@ -93,9 +96,9 @@ export default function Home() {
           <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 text-white border-white/50 hover:bg-white/20 hover:text-white" />
         </Carousel>
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white p-4">
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-wider text-shadow-lg">CREA EL COCHE DE TUS SUEÑOS</h1>
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-wider text-shadow-lg">REPUESTOS Y MODIFICACIONES PARA TU CORSA</h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg text-neutral-200">
-            Desde estilo urbano hasta rendimiento para la pista, encuentra y configura las piezas perfectas para tu proyecto. Nuestro asistente de IA te ayuda a elegir, tú conduces.
+            La casa del Corsa en Colombia. Todo lo que necesitas para tu proyecto, desde repuestos originales hasta performance.
           </p>
         </div>
       </section>
@@ -104,7 +107,7 @@ export default function Home() {
 
       <section className="w-full max-w-7xl px-4 py-16">
         <h2 className="font-headline text-4xl text-center mb-2 tracking-wide text-primary">Piezas Destacadas</h2>
-        <p className="text-center text-muted-foreground mb-8">Una selección de nuestras piezas más populares.</p>
+        <p className="text-center text-muted-foreground mb-8">Una selección de nuestros repuestos más populares para Corsa.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredParts.map((part) => (
             <PartCard key={part.name} part={part} />
@@ -138,18 +141,18 @@ export default function Home() {
             <div className="order-1 md:order-2">
                 <Image 
                     src="https://placehold.co/800x600.png"
-                    alt="Garaje con herramientas"
+                    alt="Garaje con herramientas y un Corsa"
                     width={800}
                     height={600}
                     className="rounded-lg shadow-xl"
-                    data-ai-hint="garage tools"
+                    data-ai-hint="corsa garage"
                 />
             </div>
         </div>
       </section>
 
       <section className="w-full max-w-7xl px-4 py-16">
-        <h2 className="font-headline text-4xl text-center mb-2 tracking-wide text-primary">Comunidad</h2>
+        <h2 className="font-headline text-4xl text-center mb-2 tracking-wide text-primary">Comunidad Corsa</h2>
         <p className="text-center text-muted-foreground mb-8">Inspírate con los proyectos de otros entusiastas del Corsa.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {communityProjects.map((project) => (
