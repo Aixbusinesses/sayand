@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { type Part } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,12 +7,19 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import { Button } from './ui/button';
 import { ShoppingCart } from 'lucide-react';
+import { useCart } from '@/hooks/use-cart';
 
 interface PartCardProps {
   part: Part;
 }
 
 export function PartCard({ part }: PartCardProps) {
+  const { addToCart } = useCart();
+  
+  const handleAddToCart = () => {
+    addToCart(part);
+  };
+
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
       <CardHeader>
@@ -52,7 +61,7 @@ export function PartCard({ part }: PartCardProps) {
         <Badge variant="secondary" className="text-lg bg-accent text-accent-foreground">
           Est. ${part.estimatedCost}
         </Badge>
-        <Button variant="outline">
+        <Button variant="outline" onClick={handleAddToCart}>
           <ShoppingCart className="mr-2 h-4 w-4"/>
           Añadir al Carrito
         </Button>

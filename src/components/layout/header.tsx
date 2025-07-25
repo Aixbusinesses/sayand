@@ -1,10 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Cog, ShoppingCart } from 'lucide-react';
+import { Cog, ShoppingCart, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
+import { useCart } from '@/hooks/use-cart';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { Badge } from '../ui/badge';
 
 const navLinks = [
   { href: '/catalog', label: 'Catálogo' },
@@ -15,6 +19,9 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
+  const { cart, lastAddedItem, isPopoverOpen, setIsPopoverOpen, getCartTotalItems } = useCart();
+
+  const totalItems = getCartTotalItems();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,12 +44,54 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Button asChild variant="ghost" size="icon">
-          <Link href="/cart">
-            <ShoppingCart className="h-6 w-6" />
-            <span className="sr-only">Carrito de Compras</span>
-          </Link>
-        </Button>
+
+        <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+          <PopoverTrigger asChild>
+            <Button asChild variant="ghost" size="icon" className="relative">
+              <Link href="/cart">
+                <ShoppingCart className="h-6 w-6" />
+                {totalItems > 0 && (
+                   <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 justify-center p-0">{totalItems}</Badge>
+                )}
+                <span className="sr-only">Carrito de Compras</span>
+              </Link>
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-80 mr-4">
+             {lastAddedItem ? (
+              <div className="space-y-4">
+                 <div className="flex justify-between items-start">
+                    <h4 className="font-medium leading-none">Añadido al carrito</h4>
+                    <Button variant="ghost" size="icon" className="h-6 w-6" onClick={() => setIsPopoverOpen(false)}>
+                        <X className="h-4 w-4"/>
+                    </Button>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="relative h-16 w-16 rounded-md overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1599256872236-5bf143de4d5d?q=80&w=600&h=400&auto=format&fit=crop"
+                      alt={lastAddedItem.name}
+                      fill
+                      className="object-cover"
+                      data-ai-hint="car part"
+                    />
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-sm">{lastAddedItem.name}</h5>
+                    <p className="text-sm text-muted-foreground">${lastAddedItem.estimatedCost}</p>
+                  </div>
+                </div>
+                <Button asChild className="w-full">
+                  <Link href="/cart" onClick={() => setIsPopoverOpen(false)}>Ver Carrito ({totalItems})</Link>
+                </Button>
+              </div>
+            ) : (
+                <div className="text-center p-4">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+            )}
+          </PopoverContent>
+        </Popover>
       </div>
     </header>
   );
