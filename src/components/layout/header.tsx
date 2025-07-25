@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Cog } from 'lucide-react';
+import { Cog, ShoppingCart } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 const navLinks = [
   { href: '/catalog', label: 'Catálogo' },
   { href: '/garage', label: 'Mi Garaje' },
-  { href: '/#ai-assistant', label: 'Asistente IA' },
   { href: '/community', label: 'Comunidad' },
   { href: '/contact', label: 'Contacto' },
 ];
@@ -30,14 +30,19 @@ export function Header() {
               href={link.href}
               className={cn(
                 'transition-colors hover:text-accent',
-                (pathname === link.href || (link.href === '/#ai-assistant' && pathname === '/')) ? 'text-accent' : 'text-muted-foreground'
+                pathname === link.href ? 'text-accent' : 'text-muted-foreground'
               )}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        {/* Mobile menu could be added here */}
+        <Button asChild variant="ghost" size="icon">
+          <Link href="/cart">
+            <ShoppingCart className="h-6 w-6" />
+            <span className="sr-only">Carrito de Compras</span>
+          </Link>
+        </Button>
       </div>
     </header>
   );
