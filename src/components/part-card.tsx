@@ -21,14 +21,23 @@ export function PartCard({ part }: PartCardProps) {
     addToCart(part);
   };
 
-  const partImages = {
-    "Kit de Turbo para Corsa 1.6L": "https://images.unsplash.com/photo-1522598140461-ec9911e01c53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-    "Faros Angel Eyes Corsa B": "https://images.unsplash.com/photo-1687430940898-f245095d8f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-    "Tapa Válvulas Cromada": "https://images.unsplash.com/photo-1606577924006-27d39b132ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080"
+  const partImageHints: Record<string, string> = {
+    "Performance Exhaust System": "exhaust system",
+    "Short Ram Air Intake": "air intake",
+    "Rines de Lujo 15 pulgadas": "alloy wheels",
+    "Stop Trasero Tipo Altezza": "tail lights",
+    "Kit de Frenos Mejorado": "brake kit",
+    "Spoiler Estilo GSi": "car spoiler",
+    "Pila de Gasolina de Alto Flujo": "fuel pump",
+    "Capó de Fibra de Vidrio": "hood scoop",
+    "Cables de Alta para Bujías": "spark plugs",
+    "Kit de Turbo para Corsa 1.6L": "turbo kit",
+    "Faros Angel Eyes Corsa B": "headlights",
+    "Tapa Válvulas Cromada": "engine cover"
   };
 
-  const getPartImage = (partName: string) => {
-    return partImages[partName as keyof typeof partImages] || `https://images.unsplash.com/photo-1599256872236-5bf143de4d5d?q=80&w=600&h=400&auto=format&fit=crop`;
+  const getPartImageHint = (partName: string) => {
+    return partImageHints[partName] || "car part";
   }
 
   return (
@@ -36,11 +45,11 @@ export function PartCard({ part }: PartCardProps) {
       <CardHeader>
         <div className="aspect-video relative mb-4">
           <Image 
-            src={getPartImage(part.name)} 
+            src={`https://placehold.co/600x400.png`} 
             alt={part.name}
             fill
             className="object-cover rounded-md"
-            data-ai-hint="car part"
+            data-ai-hint={getPartImageHint(part.name)}
           />
         </div>
         <CardTitle className="font-headline tracking-wide text-2xl">{part.name}</CardTitle>

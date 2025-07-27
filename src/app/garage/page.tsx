@@ -1,61 +1,98 @@
+'use client';
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { List, Wrench, Lock, UserPlus } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MessageSquare, ThumbsUp, User } from "lucide-react";
+
+const communityPosts = [
+    {
+        author: "CorsaFan82",
+        avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        time: "Hace 2 horas",
+        content: "¿Alguien sabe dónde conseguir un buen kit de turbo para un Corsa 1.6? Busco algo que no requiera modificar demasiado el motor.",
+        likes: 15,
+        comments: 4,
+    },
+    {
+        author: "EvoDriver",
+        avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
+        time: "Hace 5 horas",
+        content: "Acabo de instalar el sistema de escape performance de SAYAND y ¡suena increíble! Totalmente recomendado. El envío a Medellín fue súper rápido.",
+        likes: 42,
+        comments: 12,
+    },
+    {
+        author: "Anónimo",
+        time: "Hace 1 día",
+        content: "Busco rines de 15 pulgadas para un Corsa B, ¿tienen alguna recomendación de las que venden aquí? Quiero un look más deportivo.",
+        likes: 8,
+        comments: 2,
+    }
+];
 
 export default function GaragePage() {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto px-4 py-12">
             <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Mi Garaje</h1>
-                <p className="mt-2 text-lg text-muted-foreground">Tu espacio personal para planificar, construir y mostrar tu Corsa.</p>
+                <h1 className="font-headline text-5xl md:text-6xl text-primary tracking-wider">Foro de la Comunidad</h1>
+                <p className="mt-2 text-lg text-muted-foreground">Conéctate con otros dueños de Corsa, comparte tus proyectos y resuelve tus dudas.</p>
             </div>
 
-            <div className="relative p-8 border-2 border-dashed border-border rounded-lg">
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10 flex flex-col items-center justify-center text-center p-4">
-                    <Lock className="h-16 w-16 text-accent mb-4" />
-                    <h2 className="font-headline text-3xl text-white tracking-wide">Función Bloqueada</h2>
-                    <p className="text-muted-foreground max-w-md mt-2">
-                        Crea una cuenta o inicia sesión para acceder a tu garaje, guardar listas de piezas y seguir tus modificaciones.
-                    </p>
-                    <Button size="lg" className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90">
-                        <UserPlus className="mr-2 h-5 w-5" />
-                        Registrarse / Iniciar Sesión
-                    </Button>
-                </div>
+            <Card className="mb-8">
+                <CardHeader>
+                    <CardTitle className="font-headline tracking-wide text-2xl">Crear Nueva Publicación</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <form className="space-y-4">
+                        <Input placeholder="Tu apodo (opcional)" />
+                        <Textarea placeholder="Escribe tu pregunta o comentario aquí..." className="min-h-[120px]" />
+                        <div className="flex justify-between items-center">
+                            <p className="text-xs text-muted-foreground">
+                                **Reglas:** Mantén el respeto. No spam. Solo contenido relacionado a Corsa.
+                            </p>
+                            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
+                                Publicar
+                            </Button>
+                        </div>
+                    </form>
+                </CardContent>
+            </Card>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 filter blur-md select-none">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 font-headline tracking-wide text-2xl">
-                                <List />
-                                Mis Piezas Guardadas
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            <div className="flex items-center justify-between p-3 bg-card-foreground/5 rounded-md">
-                                <span>Performance Exhaust System</span>
-                                <span className="font-bold text-muted-foreground">$600</span>
+            <div className="space-y-6">
+                {communityPosts.map((post, index) => (
+                    <Card key={index}>
+                        <CardHeader className="flex flex-row items-start gap-4 space-y-0 pb-4">
+                             <Avatar>
+                                {post.avatar ? <AvatarImage src={post.avatar} alt={post.author} /> : <User className="h-full w-full p-2 text-muted-foreground"/> }
+                                <AvatarFallback>{post.author.substring(0,2)}</AvatarFallback>
+                            </Avatar>
+                            <div className="flex-grow">
+                                <p className="font-bold">{post.author}</p>
+                                <p className="text-xs text-muted-foreground">{post.time}</p>
                             </div>
-                            <div className="flex items-center justify-between p-3 bg-card-foreground/5 rounded-md">
-                                <span>16-inch Alloy Wheels 'Torque'</span>
-                                <span className="font-bold text-muted-foreground">$950</span>
-                            </div>
-                        </CardContent>
-                    </Card>
-
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2 font-headline tracking-wide text-2xl">
-                                <Wrench />
-                                Mi Proyecto Actual
-                            </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="aspect-video bg-card-foreground/5 rounded-lg"></div>
-                            <p className="text-muted-foreground mt-2">1998 Corsa B 1.6 - Proyecto de Pista</p>
+                            <p className="text-foreground/90">{post.content}</p>
+                        </CardContent>
+                        <CardContent className="flex items-center gap-6 text-muted-foreground pt-4">
+                            <div className="flex items-center gap-2">
+                                <Button variant="ghost" size="icon" className="h-8 w-8">
+                                    <ThumbsUp className="h-4 w-4" />
+                                </Button>
+                                <span>{post.likes}</span>
+                            </div>
+                             <div className="flex items-center gap-2">
+                                <Button variant="ghost" size="icon" className="h-8 w-8">
+                                    <MessageSquare className="h-4 w-4" />
+                                </Button>
+                                <span>{post.comments}</span>
+                            </div>
                         </CardContent>
                     </Card>
-                </div>
+                ))}
             </div>
         </div>
     );
