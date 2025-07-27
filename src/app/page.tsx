@@ -1,3 +1,6 @@
+
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { AIAssistant } from '@/components/ai-assistant';
@@ -7,6 +10,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Wrench } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { CommunityCard } from '@/components/community-card';
+import { useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const featuredParts: Part[] = [
   {
@@ -63,17 +68,24 @@ const carouselImages = [
   { src: "https://images.unsplash.com/photo-1622684803738-17a415a781b1?q=80&w=2070&auto=format&fit=crop", alt: "Motor de Corsa modificado", hint: "corsa engine" },
   { src: "https://images.unsplash.com/photo-1555516183-1e247b92a343?q=80&w=2070&auto=format&fit=crop", alt: "Corsa azul deportivo", hint: "blue corsa" },
   { src: "https://images.unsplash.com/photo-1629450648316-c14d6f859424?q=80&w=1974&auto=format&fit=crop", alt: "Corsa rojo clásico", hint: "red corsa" },
-  { src: "https://images.unsplash.com/photo-1553440569-b5f370461872?q=80&w=2070&auto=format&fit=crop", alt: "Corsa de carreras", hint: "corsa race car" },
 ];
 
 
 export default function Home() {
+
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+
   return (
     <div className="flex flex-col items-center">
       <section className="w-full relative">
         <Carousel
+          plugins={[plugin.current]}
           opts={{ loop: true, }}
           className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {carouselImages.map((image, index) => (
