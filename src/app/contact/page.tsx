@@ -2,7 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -39,10 +40,12 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <Phone className="h-6 w-6 text-accent mt-1" />
+            <MessageCircle className="h-6 w-6 text-accent mt-1" />
             <div>
-              <h4 className="font-bold">WhatsApp</h4>
-              <p className="text-muted-foreground">3112423436</p>
+              <h4 className="font-bold">Telegram</h4>
+              <Link href="https://t.me/your_telegram_bot" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+                Contáctanos por Telegram
+              </Link>
             </div>
           </div>
           <div className="flex items-start gap-4">
