@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
                 <Image 
-                    src="https://images.unsplash.com/photo-1549298236-834928e578a1?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1668560764958-ed96c0830438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb3JzYXxlbnwwfHx8fDE3NTM1NzY2MTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                     alt="Garaje con herramientas y un Corsa"
                     width={800}
                     height={600}
