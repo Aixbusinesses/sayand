@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -20,12 +21,22 @@ export function PartCard({ part }: PartCardProps) {
     addToCart(part);
   };
 
+  const partImages = {
+    "Kit de Turbo para Corsa 1.6L": "https://images.unsplash.com/photo-1522598140461-ec9911e01c53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "Faros Angel Eyes Corsa B": "https://images.unsplash.com/photo-1687430940898-f245095d8f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "Tapa Válvulas Cromada": "https://images.unsplash.com/photo-1606577924006-27d39b132ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjBwYXJ0fGVufDB8fHx8MTc1MzU3NzI5OXww&ixlib=rb-4.1.0&q=80&w=1080"
+  };
+
+  const getPartImage = (partName: string) => {
+    return partImages[partName as keyof typeof partImages] || `https://images.unsplash.com/photo-1599256872236-5bf143de4d5d?q=80&w=600&h=400&auto=format&fit=crop`;
+  }
+
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
       <CardHeader>
         <div className="aspect-video relative mb-4">
           <Image 
-            src={`https://images.unsplash.com/photo-1599256872236-5bf143de4d5d?q=80&w=600&h=400&auto=format&fit=crop`} 
+            src={getPartImage(part.name)} 
             alt={part.name}
             fill
             className="object-cover rounded-md"
