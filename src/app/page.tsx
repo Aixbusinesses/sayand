@@ -98,7 +98,7 @@ export default function Home() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white p-4">
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl tracking-wider text-shadow-lg">REPUESTOS Y MODIFICACIONES PARA TU CORSA</h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg text-neutral-200">
-            2 decadas de Experiencia nos respaldan. Todo lo que necesitas para tu proyecto, repuestos y modificaciones
+            2 décadas de experiencia nos respaldan. Todo lo que necesitas para tu proyecto, repuestos y modificaciones
           </p>
         </div>
       </section>
