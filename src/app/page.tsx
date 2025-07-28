@@ -66,9 +66,9 @@ const communityProjects = [
 ];
 
 const carouselImages = [
-  { src: "https://images.unsplash.com/photo-1562508156-afcfbacc5360?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3JzYSUyMGVuZ2luZXxlbnwwfHx8fDE3NTM1NzcyOTh8MA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Motor de Corsa modificado", hint: "corsa engine" },
-  { src: "https://images.unsplash.com/photo-1735012314901-10b3638774a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibHVlJTIwY29yc2F8ZW58MHx8fHwxNzUzNTc3Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Corsa azul deportivo", hint: "blue corsa" },
-  { src: "https://images.unsplash.com/photo-1604172497384-6fea2a1e7092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZWQlMjBjb3JzYXxlbnwwfHx8fDE3NTM1NzcyOTh8MA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Corsa rojo clásico", hint: "red corsa" },
+  { src: "https://images.unsplash.com/photo-1629450648316-c14d6f859424?q=80&w=1974&auto=format&fit=crop", alt: "Corsa rojo clásico", hint: "red corsa" },
+  { src: "https://images.unsplash.com/photo-1555516183-1e247b92a343?q=80&w=2070&auto=format&fit=crop", alt: "Corsa azul deportivo", hint: "blue corsa" },
+  { src: "https://images.unsplash.com/photo-1610196928275-3b953835c643?q=80&w=1974&auto=format&fit=crop", alt: "Rueda de Opel", hint: "opel wheel" },
 ];
 
 
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
                 <Image 
-                    src="https://images.unsplash.com/photo-1659625883328-26a8df1d8c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3JzYSUyMGdhcmFnZXxlbnwwfHx8fDE3NTM1NzcyOTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="https://images.unsplash.com/photo-1668560764958-ed96c0830438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb3JzYXxlbnwwfHx8fDE3NTM1NzY2MTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                     alt="Garaje con herramientas y un Corsa"
                     width={800}
                     height={600}
